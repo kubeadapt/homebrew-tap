@@ -11,7 +11,7 @@ class Kubeadapt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.1/kubeadapt_0.1.1_darwin_amd64.tar.gz"
-      sha256 "163b8142fd26b4fc97a762bdbcc1510917bba8f85148c6dd5f277ca1530b9dd4"
+      sha256 "78cf1e334fe797067d74b9b1adf6afe4466bbf6752255935ed463a5be8e5ffb7"
 
       define_method(:install) do
         bin.install "kubeadapt"
@@ -19,7 +19,7 @@ class Kubeadapt < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.1/kubeadapt_0.1.1_darwin_arm64.tar.gz"
-      sha256 "98595b163fca980f6c44bfe5055aae6ea2cca2f3890bdc59be898dbecd406159"
+      sha256 "303076e63e59c6a018f213a98ee198002c172161d988cc7ff716c75be7ecc9a3"
 
       define_method(:install) do
         bin.install "kubeadapt"
@@ -30,14 +30,14 @@ class Kubeadapt < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.1/kubeadapt_0.1.1_linux_amd64.tar.gz"
-      sha256 "ce23adf8c66f5469adc3c468918aa8e6f60a86f2c1a1a73cbd80ecc43e666381"
+      sha256 "41fc80705df30d9484c25d6dcac6e0d30ae2f77202e489a8e73739e655297db6"
       define_method(:install) do
         bin.install "kubeadapt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.1/kubeadapt_0.1.1_linux_arm64.tar.gz"
-      sha256 "00ad32c7de3a5e7941fc4ac5fa2f8797204f610d1e3cf8723c3c6a7ee34f144f"
+      sha256 "092efb3606dc1984b4336e8911f1027a8875e62fae6fdb5e954a84cd37d2713b"
       define_method(:install) do
         bin.install "kubeadapt"
       end
