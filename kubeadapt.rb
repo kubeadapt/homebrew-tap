@@ -5,21 +5,21 @@
 class Kubeadapt < Formula
   desc "Kubeadapt CLI for Kubernetes cost optimization"
   homepage "https://kubeadapt.io"
-  version "0.1.2"
+  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.2/kubeadapt_0.1.2_darwin_amd64.tar.gz"
-      sha256 "53ef208e1e65ffbb781b553482a34ce81c4f2320aff1f2b40011e2c2d4a4304a"
+      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.3/kubeadapt_0.1.3_darwin_amd64.tar.gz"
+      sha256 "1df18aec33f344ee934834d214ab013ad8d695c6db501ef42868c5046201b495"
 
       define_method(:install) do
         bin.install "kubeadapt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.2/kubeadapt_0.1.2_darwin_arm64.tar.gz"
-      sha256 "3da435ef422c3511b81890acc0120973d105e8619e06fd44c7333c1aa14c6998"
+      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.3/kubeadapt_0.1.3_darwin_arm64.tar.gz"
+      sha256 "335e5677d6a94836c1c1c2353ae350fec55d13cb65d3d3fc591bddf1c7d6a70f"
 
       define_method(:install) do
         bin.install "kubeadapt"
@@ -29,15 +29,15 @@ class Kubeadapt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.2/kubeadapt_0.1.2_linux_amd64.tar.gz"
-      sha256 "5dd7f8187385257eca926500d53a405651fb4eddb6e744a8d5427364dbe50148"
+      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.3/kubeadapt_0.1.3_linux_amd64.tar.gz"
+      sha256 "5d99cb49ae87f56220ba2b53172edc9d19df58d9a3aefa6575d1047cf9005ec6"
       define_method(:install) do
         bin.install "kubeadapt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.2/kubeadapt_0.1.2_linux_arm64.tar.gz"
-      sha256 "4fa092dc619699ec229affd0279f93ca06af03346976d690e52cfc728eabf530"
+      url "https://github.com/kubeadapt/kubeadapt-cli/releases/download/v0.1.3/kubeadapt_0.1.3_linux_arm64.tar.gz"
+      sha256 "63c99eb5ed5b66ebf6c6f8b8836ed60bb6def0133ea9ed7aaa2de808715cad4e"
       define_method(:install) do
         bin.install "kubeadapt"
       end
